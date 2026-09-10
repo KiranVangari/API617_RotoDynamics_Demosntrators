@@ -49,14 +49,22 @@ app.layout = html.Div([
             ])
         ], style={'flex-grow': '1'}),  # This forces the section to take up available vertical space
 
-        # BOTTOM SECTION (LinkedIn Footer)
+        # BOTTOM SECTION (Disclaimer & LinkedIn Footer)
         html.Div([
             html.Hr(style={'border-color': '#7f8c8d', 'margin-bottom': '15px'}),
+
+            # Educational Disclaimer
+            html.P(
+                "Disclaimer: These demonstrators are provided for educational and illustrative purposes only. They are not intended for commercial engineering, machinery diagnostics, or compliance certification.",
+                style={'font-size': '11px', 'color': '#95a5a6', 'font-style': 'italic', 'text-align': 'justify',
+                       'margin-bottom': '15px', 'line-height': '1.4'}),
+
+            # LinkedIn Credit
             html.Span("Website created by:", style={'font-size': '13px', 'color': '#bdc3c7'}),
             html.Br(),
             html.A("Kiran Vangari", href="https://www.linkedin.com/in/kiranvangari/", target="_blank",
                    style={'color': '#3498db', 'text-decoration': 'none', 'font-weight': 'bold', 'font-size': '15px'})
-        ], style={'text-align': 'center', 'padding-bottom': '10px'})
+        ], style={'text-align': 'center', 'padding-bottom': '10px', 'padding-left': '5px', 'padding-right': '5px'})
 
     ], style=SIDEBAR_STYLE),
 
